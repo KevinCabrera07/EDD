@@ -40,12 +40,13 @@ public class arreglo {
         // da el resultado de la suma
         System.out.println("suma pares: " + sumaPares);
         System.out.println("suma impares: " + sumaImpares);
-        
-        for( int i=0; i< a.length; i++) {
-            if (i% 2==0) {
-                
-               System.out.println("a[" + i + "]=" + a[i]); 
+
+        for (int i = 0; i < a.length; i++) {
+            if (i % 2 == 0) {
+
+                System.out.println("a[" + i + "]=" + a[i]);
             }
         }
     }
 }
+    
