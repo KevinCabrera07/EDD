@@ -17,7 +17,7 @@ public class PrincipalS {
         }
         System.out.println("\n");
 
-        // Filtrar múltiplos de 10
+        
         int[] multiplos = new int[12];
         int contador = 0;
 
