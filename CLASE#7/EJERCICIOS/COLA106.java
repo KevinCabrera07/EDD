@@ -10,7 +10,7 @@ public class COLA106 {
 
         Random rand = new Random();
 
-        int tiempoTotal = 60 * 7; // 7 horas en minutos
+        int tiempoTotal = 60 * 7; 
         int clientesAtendidos = 0;
         int maxCola = 0;
         int sumaCola = 0;
@@ -19,46 +19,46 @@ public class COLA106 {
 
         for (int tiempo = 0; tiempo < tiempoTotal; tiempo++) {
 
-            // Llegan clientes (probabilidad)
+            
             if (rand.nextInt(2) == 0) {
-                colaClientes.add(tiempo); // guardamos tiempo de llegada
+                colaClientes.add(tiempo); 
             }
 
-            // Activar caja 4 si hay muchos clientes
+        
             boolean usarCaja4 = colaClientes.size() > 20;
 
-            // Atender clientes si la caja está libre
+        
             if (caja1 == 0 && !colaClientes.isEmpty()) {
                 colaClientes.poll();
-                caja1 = rand.nextInt(2) + 1; // 1-2 min
+                caja1 = rand.nextInt(2) + 1; 
                 clientesAtendidos++;
             }
 
             if (caja2 == 0 && !colaClientes.isEmpty()) {
                 colaClientes.poll();
-                caja2 = rand.nextInt(4) + 2; // 2-5 min
+                caja2 = rand.nextInt(4) + 2;
                 clientesAtendidos++;
             }
 
             if (caja3 == 0 && !colaClientes.isEmpty()) {
                 colaClientes.poll();
-                caja3 = rand.nextInt(3) + 2; // 2-4 min
+                caja3 = rand.nextInt(3) + 2; 
                 clientesAtendidos++;
             }
 
             if (usarCaja4 && caja4 == 0 && !colaClientes.isEmpty()) {
                 colaClientes.poll();
-                caja4 = rand.nextInt(3) + 2; // 2-4 min
+                caja4 = rand.nextInt(3) + 2; 
                 clientesAtendidos++;
             }
 
-            // Reducir tiempos de atención
+            
             if (caja1 > 0) caja1--;
             if (caja2 > 0) caja2--;
             if (caja3 > 0) caja3--;
             if (usarCaja4 && caja4 > 0) caja4--;
 
-            // Estadísticas
+            
             sumaCola += colaClientes.size();
 
             if (colaClientes.size() > maxCola) {
