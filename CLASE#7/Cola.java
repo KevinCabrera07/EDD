@@ -6,13 +6,13 @@ public class Cola {
 
     Queue<Integer> objCola = new LinkedList();
 
-    //agregar elementos a la cola(add,offer)
+
     objCola.add(07);
     objCola.add(20);
     objCola.offer(4);
     objCola.offer(05);
 
-    //mostrar elementos de la cola
+   
     System.out.println(objCola);
 
     //mostrar la cabeza de la cola (element,peek)
