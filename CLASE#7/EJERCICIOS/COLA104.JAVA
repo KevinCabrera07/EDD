@@ -17,7 +17,6 @@ public class COLA104 {
         Queue<Integer> cola2 = new LinkedList<>();
         Queue<Integer> resultado = new LinkedList<>();
 
-        // Guardar dígitos en colas
         for (char c : num1.toCharArray()) {
             cola1.add(Character.getNumericValue(c));
         }
@@ -26,7 +25,6 @@ public class COLA104 {
             cola2.add(Character.getNumericValue(c));
         }
 
-        // Convertir a listas para recorrer al revés
         LinkedList<Integer> l1 = new LinkedList<>(cola1);
         LinkedList<Integer> l2 = new LinkedList<>(cola2);
 
@@ -47,7 +45,6 @@ public class COLA104 {
             j--;
         }
 
-        // Mostrar resultado correcto
         System.out.print("Resultado: ");
         LinkedList<Integer> res = new LinkedList<>(resultado);
 
